@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-
 namespace WebApplication.Controllers
 {
     public class ProductController : BaseController
@@ -20,9 +19,16 @@ namespace WebApplication.Controllers
         }
 
         [HttpGet("{id}")]
-        public Product GetById(int id)
+        public ActionResult<Product> GetById(int id)
         {
-            return Products.FirstOrDefault(p => p.Id == id);
+            
+            var item = Products.FirstOrDefault(p => p.Id == id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            return item;
         }
 
         [HttpPost]
