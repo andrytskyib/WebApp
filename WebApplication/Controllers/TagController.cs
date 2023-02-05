@@ -6,10 +6,10 @@ namespace WebApplication.Controllers
     {
         private static readonly List<Tag> Tags = new List<Tag>()
         {
-            new Tag{Name= "Product 1", Description = "This veg", Id = 1, ProductId = 1},
-            new Tag{Name= "Product 2", Description = "This fruit", Id = 2, ProductId = 2},
-            new Tag{Name= "Product 3", Description = "This veg", Id = 3, ProductId = 1},
-            new Tag{Name= "Product 4", Description = "This fruit", Id = 4, ProductId = 2}
+            new Tag{Name = "Product 1", Description = "This veg", Id = 1, ProductId = 1},
+            new Tag{Name = "Product 2", Description = "This fruit", Id = 2, ProductId = 2},
+            new Tag{Name = "Product 3", Description = "This veg", Id = 3, ProductId = 1},
+            new Tag{Name = "Product 4", Description = "This fruit", Id = 4, ProductId = 2}
         };
 
         [HttpGet]
